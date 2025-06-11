@@ -33,14 +33,49 @@ if(isset($_SESSION['login'])){
                                 </a>
                                 <p class="text-center">REGISTRASI</p>
                                 <form class="user" action="proses/registrasi_post.php" method="POST">
+                                    <?php 
+                                if(isset($_SESSION['msg-global'])){
+                                    ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $_SESSION['msg-global'] ?>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
                                     <div class="mb-3">
                                         <label for="exampleInputtext1" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="exampleInputtext1"
-                                            aria-describedby="textHelp">
+                                        <input type="text"
+                                            value="<?= (isset($_SESSION['username_cache']))?$_SESSION['username_cache']:null ?>"
+                                            class="form-control <?= (isset($_SESSION['msg-user']))?"is-invalid":null ?>"
+                                            id="exampleInputtext1" aria-describedby="textHelp" name="username">
+                                        <?php 
+                                    if(isset($_SESSION['msg-user'])){
+                                    ?>
+
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            <?= $_SESSION['msg-user'] ?>
+                                        </div>
+
+                                        <?php
+                                    }
+                                    ?>
                                     </div>
                                     <div class="mb-4">
                                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                        <input type="password"
+                                            class="form-control <?= (isset($_SESSION['msg-pass']))?"is-invalid":null ?>"
+                                            id="exampleInputPassword1" name="password">
+                                        <?php 
+                                        if(isset($_SESSION['msg-pass'])){
+                                        ?>
+
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            <?= $_SESSION['msg-pass'] ?>
+                                        </div>
+
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
                                     <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="bttn"
                                         type="submit">Masuk!</button>
