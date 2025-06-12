@@ -17,7 +17,8 @@
             <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
-                        <div class="d-flex align-items-center gap-3">
+                        <div
+                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['MP/form_input', 'MP/table']) ? 'show' : ''; ?>">
                             <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MP/form_input' ? 'active' : ''; ?>"
                                 href="?page=MP/form_input">Form Pelanggan</a>
                         </div>
@@ -27,7 +28,8 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
-                            <span class="hide-menu">Data Pelanggan</span>
+                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MP/table' ? 'active' : ''; ?>"
+                                href="?page=MP/table">Table Pelanggan</a>
                         </div>
 
                     </a>
