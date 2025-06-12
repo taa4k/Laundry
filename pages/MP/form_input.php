@@ -24,7 +24,7 @@
                             }
                         ?>
                 <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Masukkan Data Category</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Masukkan Data Pelanggan</h1>
                 </div>
                 <form action="pages/kategori/proses/kategori_post.php" method="POST" class="user">
                     <div class="form-group">
@@ -36,6 +36,7 @@
                                         }
                                     ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input name="nama" type="text" class="form-control form-control-user"
                             placeholder="Masukkan Nama..">
@@ -45,9 +46,10 @@
                                         }
                                     ?>
                     </div>
+                    <br>
                     <!-- Tombol Login di kanan bawah -->
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-danger btn-user" name="btn-submit" type="submit">
+                        <button class="btn btn-primary btn-user" name="btn-submit" type="submit">
                             SUBMIT!
                         </button>
                     </div>
