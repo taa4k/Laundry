@@ -28,6 +28,16 @@
                 </div>
                 <form action="MP/proses/input_post.php" method="POST" class="user">
                     <div class="form-group">
+                        <input name="kode" type="text" class="form-control form-control-user"
+                            placeholder="Masukkan kode Pelanggan..">
+                        <?php 
+                                        if(isset($_SESSION['msg']['err_kode'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_kode'].'</span>';
+                                        }
+                                    ?>
+                    </div>
+                    <br>
+                    <div class="form-group">
                         <input name="nama" type="text" class="form-control form-control-user"
                             placeholder="Masukkan Nama Pelanggan..">
                         <?php 
