@@ -67,6 +67,36 @@
                                     ?>
                     </div>
                     <br>
+                    <div class="form-group">
+                        <input name="tanggal" type="text" class="form-control form-control-user"
+                            placeholder="Masukkan Tanggal..">
+                        <?php 
+                                        if(isset($_SESSION['msg']['err_tanggal'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_tanggal'].'</span>';
+                                        }
+                                    ?>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input name="status" type="text" class="form-control form-control-user"
+                            placeholder="Masukkan Status..">
+                        <?php 
+                                        if(isset($_SESSION['msg']['err_status'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_status'].'</span>';
+                                        }
+                                    ?>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input name="deskripsi" type="text" class="form-control form-control-user"
+                            placeholder="Masukkan Deskripsi..">
+                        <?php 
+                                        if(isset($_SESSION['msg']['err_deskripsi'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_deskripsi'].'</span>';
+                                        }
+                                    ?>
+                    </div>
+                    <br>
                     <!-- Tombol Login di kanan bawah -->
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-primary btn-user" name="btn-submit" type="submit">

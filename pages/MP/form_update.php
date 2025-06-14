@@ -1,3 +1,11 @@
+<?php 
+$kode = $_REQUEST['kode_pelanggan'];
+include('../assets/koneksi.php');
+$query = "SELECT * FROM pelanggan WHERE kode_pelanggan='$kode'";
+$q = mysqli_query($koneksi, $query);
+$data = mysqli_fetch_array($q);
+
+?>
 <!--page headings-->
 <h1 class="h3 mb-4 text-gray-800">Form Pelanggan</h1>
 <hr>
@@ -26,20 +34,15 @@
                 <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Masukkan Data Pelanggan</h1>
                 </div>
-                <form action="MP/proses/input_post.php" method="POST" class="user">
+                <form action="MP/proses/update_post.php" method="POST" class="user">
                     <div class="form-group">
-                        <input name="kode" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan kode Pelanggan..">
-                        <?php 
-                                        if(isset($_SESSION['msg']['err_kode'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_kode'].'</span>';
-                                        }
-                                    ?>
+                        <input readonly value="<?= $data['kode_pelanggan'] ?>" name="kode" type="text"
+                            class="form-control form-control-user">
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="nama" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Nama Pelanggan..">
+                        <input value="<?= $data['nama_pelanggan'] ?>" name="nama" type="text"
+                            class="form-control form-control-user">
                         <?php 
                                         if(isset($_SESSION['msg']['err_nama'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_nama'].'</span>';
@@ -48,8 +51,8 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="no_hp" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Nomor Handphone..">
+                        <input value="<?= $data['no_hp'] ?>" name="no_hp" type="text"
+                            class="form-control form-control-user">
                         <?php 
                                         if(isset($_SESSION['msg']['err_no_hp'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_no_hp'].'</span>';
@@ -58,8 +61,8 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="alamat" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Alamat..">
+                        <input value="<?= $data['alamat'] ?>" name="alamat" type="text"
+                            class="form-control form-control-user">
                         <?php 
                                         if(isset($_SESSION['msg']['err_alamat'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_alamat'].'</span>';
