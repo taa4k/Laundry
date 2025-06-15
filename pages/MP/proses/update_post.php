@@ -32,11 +32,11 @@ $query = "SELECT * FROM pelanggan WHERE nama_pelanggan='$nama' AND kode_pelangga
 $q = mysqli_query($koneksi, $query);
 if(mysqli_num_rows($q) != 0){
     $_SESSION['msg']['error'] = "Data kategori sudah ada, periksa kode atau nama yang sama";
-    header('location:/../?page=MP/form_update&kode_pelanggan='.$kode);
+    header('location:../../?page=MP/form_update&kode_pelanggan='.$kode);
     exit();
 }
 
-$query = "UPDATE pelanggan SET nama_pelanggan='$nama', no_hp='$no_hp', alamat='$alamat'";
+$query = "UPDATE pelanggan SET nama_pelanggan='$nama', no_hp='$no_hp', alamat='$alamat' WHERE kode_pelanggan='$kode'";
 if (mysqli_query($koneksi, $query)) {
     $_SESSION['msg']['success'] = "Data penerbit berhasil diupdate";    
 } else {
