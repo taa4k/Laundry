@@ -48,17 +48,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="no_hp" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Nomor Induk Kependudukan..">
-                        <?php 
-                                        if(isset($_SESSION['msg']['err_nik'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_nik'].'</span>';
-                                        }
-                                    ?>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <input name="alamat" type="text" class="form-control form-control-user"
+                        <input name="jk" type="text" class="form-control form-control-user"
                             placeholder="Masukkan Jenis Kelamin..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_jk'])){
@@ -78,7 +68,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="status" type="text" class="form-control form-control-user"
+                        <input name="alamat" type="text" class="form-control form-control-user"
                             placeholder="Masukkan Alamat..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_alamat'])){
@@ -88,7 +78,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <input name="deskripsi" type="text" class="form-control form-control-user"
+                        <input name="no_hp" type="text" class="form-control form-control-user"
                             placeholder="Masukkan Nomor Handphone..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_no_hp'])){
