@@ -119,10 +119,8 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="round-16 d-flex align-items-center justify-content-center">
-                                <i class="ti ti-circle"></i>
-                            </div>
-                            <span class="hide-menu">Data Laporan Keuangan</span>
+                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/table' ? 'active' : ''; ?>"
+                                href="?page=KT/table">Table Transaksi</a>
                         </div>
 
                     </a>
