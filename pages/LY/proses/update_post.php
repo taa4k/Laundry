@@ -9,39 +9,35 @@ if (!isset($_POST['btn-submit'])) {
 }
 
 $kode = $_POST['kode'];
-$nama = $_POST['nama'];
-$no_hp = $_POST['no_hp'];
-$alamat = $_POST['alamat'];
+$atribut = $_POST['atribut'];
+$deskripsi = $_POST['deskripsi'];
 
-if($nama == ''){
-    $_SESSION['msg']['err_nama'] = "nama tidak boleh kosong";
+if($atribut == ''){
+    $_SESSION['msg']['err_atribut'] = "atribut tidak boleh kosong";
 }
-if($no_hp == ''){
-    $_SESSION['msg']['err_no_hp'] = "nomor tidak boleh kosong";
-}
-if($alamat == ''){
-    $_SESSION['msg']['err_alamat'] = "alamat tidak boleh kosong";
+if($deskripsi == ''){
+    $_SESSION['msg']['err_deskripsi'] = "deskripsi tidak boleh kosong";
 }
 
-if(isset($_SESSION['msg']['err_kode']) || isset($_SESSION['msg']['err_nama'])|| isset($_SESSION['msg']['err_no_hp'])|| isset($_SESSION['msg']['err_alamat'])){
-    header('location:../../?page=MP/form_update');
+if(isset($_SESSION['msg']['err_kode']) || isset($_SESSION['msg']['err_atribut'])|| isset($_SESSION['msg']['err_deskripsi'])){
+    header('location:../../?page=LY/form_update');
     exit();
 }
 
-$query = "SELECT * FROM pelanggan WHERE nama_pelanggan='$nama' AND kode_pelanggan != '$kode'";
+$query = "SELECT * FROM laundry WHERE atribut='$atribut' AND kode_laundry != '$kode'";
 $q = mysqli_query($koneksi, $query);
 if(mysqli_num_rows($q) != 0){
     $_SESSION['msg']['error'] = "Data kategori sudah ada, periksa kode atau nama yang sama";
-    header('location:/../?page=MP/form_update&kode_pelanggan='.$kode);
+    header('location:/../?page=LY/form_update&kode_laundry='.$kode);
     exit();
 }
 
-$query = "UPDATE pelanggan SET nama_pelanggan='$nama', no_hp='$no_hp', alamat='$alamat'";
+$query = "UPDATE laundry SET atribut='$atribut', deskripsi='$deskripsi'";
 if (mysqli_query($koneksi, $query)) {
     $_SESSION['msg']['success'] = "Data penerbit berhasil diupdate";    
 } else {
     $_SESSION['msg']['error'] = "Gagal mengupdate data: " . mysqli_error($koneksi);
 }
-header('location:../../?page=MP/table');
+header('location:../../?page=LY/table');
 exit();
 ?>

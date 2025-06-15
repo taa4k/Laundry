@@ -1,11 +1,11 @@
 <?php 
 
-$kode = $_REQUEST['kode_pelanggan'];
+$kode = $_REQUEST['kode_laundry'];
 
 include('../../../assets/koneksi.php');
 
-$query = "DELETE FROM pelanggan WHERE kode_pelanggan='$kode'";
+$query = "DELETE FROM laundry WHERE kode_laundry='$kode'";
 mysqli_query($koneksi, $query);
 session_start();
-$_SESSION['msg']['success'] = "Data pelanggan ".$kode." berhasil dihapus";
-header('location:../../?page=MP/table');
+$_SESSION['msg']['success'] = "Data laundry ".$kode." berhasil dihapus";
+header('location:../../?page=LY/table');

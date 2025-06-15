@@ -21,7 +21,7 @@ include('../components/style.php');
         data-sidebar-position="fixed" data-header-position="fixed">
 
         <!--  App Topstrip -->
-        <div class="app-topstrip bg-dark py-9 px-5 w-100 d-lg-flex align-items-center justify-content-between">
+        <div class="app-topstrip bg-black py-9 px-5 w-100 d-lg-flex align-items-center justify-content-between">
             <?php
             include('../components/navbar.php');
           ?>

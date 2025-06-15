@@ -1,5 +1,5 @@
 <!--page headings-->
-<h1 class="h3 mb-4 text-gray-800">Form Pelanggan</h1>
+<h1 class="h3 mb-4 text-gray-800">Form Karyawan</h1>
 <hr>
 <!-- content -->
 <div class="row justify-content-start">
@@ -24,12 +24,12 @@
                             }
                         ?>
                 <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Masukkan Data Pelanggan</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Masukkan Data Karyawan</h1>
                 </div>
-                <form action="MP/proses/input_post.php" method="POST" class="user">
+                <form action="MK/proses/input_post.php" method="POST" class="user">
                     <div class="form-group">
                         <input name="kode" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan kode Pelanggan..">
+                            placeholder="Masukkan kode karyawan..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_kode'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_kode'].'</span>';
@@ -39,7 +39,7 @@
                     <br>
                     <div class="form-group">
                         <input name="nama" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Nama Pelanggan..">
+                            placeholder="Masukkan Nama Karyawan..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_nama'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_nama'].'</span>';
@@ -49,27 +49,27 @@
                     <br>
                     <div class="form-group">
                         <input name="no_hp" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Nomor Handphone..">
+                            placeholder="Masukkan Nomor Induk Kependudukan..">
                         <?php 
-                                        if(isset($_SESSION['msg']['err_no_hp'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_no_hp'].'</span>';
+                                        if(isset($_SESSION['msg']['err_nik'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_nik'].'</span>';
                                         }
                                     ?>
                     </div>
                     <br>
                     <div class="form-group">
                         <input name="alamat" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Alamat..">
+                            placeholder="Masukkan Jenis Kelamin..">
                         <?php 
-                                        if(isset($_SESSION['msg']['err_alamat'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_alamat'].'</span>';
+                                        if(isset($_SESSION['msg']['err_jk'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_jk'].'</span>';
                                         }
                                     ?>
                     </div>
                     <br>
                     <div class="form-group">
                         <input name="tanggal" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Tanggal..">
+                            placeholder="Masukkan Tanggal Lahir..">
                         <?php 
                                         if(isset($_SESSION['msg']['err_tanggal'])){
                                             echo '<span class="text-danger">'.$_SESSION['msg']['err_tanggal'].'</span>';
@@ -79,20 +79,20 @@
                     <br>
                     <div class="form-group">
                         <input name="status" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Status..">
+                            placeholder="Masukkan Alamat..">
                         <?php 
-                                        if(isset($_SESSION['msg']['err_status'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_status'].'</span>';
+                                        if(isset($_SESSION['msg']['err_alamat'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_alamat'].'</span>';
                                         }
                                     ?>
                     </div>
                     <br>
                     <div class="form-group">
                         <input name="deskripsi" type="text" class="form-control form-control-user"
-                            placeholder="Masukkan Deskripsi..">
+                            placeholder="Masukkan Nomor Handphone..">
                         <?php 
-                                        if(isset($_SESSION['msg']['err_deskripsi'])){
-                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_deskripsi'].'</span>';
+                                        if(isset($_SESSION['msg']['err_no_hp'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['err_no_hp'].'</span>';
                                         }
                                     ?>
                     </div>

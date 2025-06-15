@@ -69,7 +69,8 @@
         </li>
         <br>
         <li class="sidebar-item">
-            <a class="sidebar-link justify-content-between has-arrow" href="javascript:void(0)" aria-expanded="false">
+            <a class="sidebar-link justify-content-between has-arrow" href="javascript:void(0)"
+                aria-expanded="<?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['MK/form_input', 'MK/table']) ? 'true' : 'false'; ?>">
                 <div class="d-flex align-items-center gap-3">
                     <span class="hide-menu">Karyawan</span>
                 </div>
@@ -78,13 +79,11 @@
             <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="round-16 d-flex align-items-center justify-content-center">
-                                <i class="ti ti-circle"></i>
-                            </div>
-                            <span class="hide-menu">Form Karyawan</span>
+                        <div
+                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['MK/form_input', 'MK/table']) ? 'show' : ''; ?>">
+                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MK/form_input' ? 'active' : ''; ?>"
+                                href="?page=MK/form_input">Form Karyawan</a>
                         </div>
-
                     </a>
                 </li>
                 <li class="sidebar-item">

@@ -34,14 +34,14 @@ $data = mysqli_fetch_array($q);
                 <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Masukkan Data Laundry</h1>
                 </div>
-                <form action="MP/proses/update_post.php" method="POST" class="user">
+                <form action="LY/proses/update_post.php" method="POST" class="user">
                     <div class="form-group">
                         <input readonly value="<?= $data['kode_laundry'] ?>" name="kode" type="text"
                             class="form-control form-control-user">
                     </div>
                     <br>
                     <div class="form-group">
-                        <input value="<?= $data['atribut'] ?>" name="nama" type="text"
+                        <input value="<?= $data['atribut'] ?>" name="atribut" type="text"
                             class="form-control form-control-user">
                         <?php 
                                         if(isset($_SESSION['msg']['err_nama'])){
@@ -51,7 +51,7 @@ $data = mysqli_fetch_array($q);
                     </div>
                     <br>
                     <div class="form-group">
-                        <input value="<?= $data['deskripsi'] ?>" name="no_hp" type="text"
+                        <input value="<?= $data['deskripsi'] ?>" name="deskripsi" type="text"
                             class="form-control form-control-user">
                         <?php 
                                         if(isset($_SESSION['msg']['err_no_hp'])){
