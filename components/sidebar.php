@@ -17,19 +17,9 @@
             <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
-                        <div
-                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['MP/form_input', 'MP/table']) ? 'show' : ''; ?>">
-                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MP/form_input' ? 'active' : ''; ?>"
-                                href="?page=MP/form_input">Form Pelanggan</a>
-                        </div>
-
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
                             <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MP/table' ? 'active' : ''; ?>"
-                                href="?page=MP/table">Table Pelanggan</a>
+                                href="?page=MP/table">Pelanggan</a>
                         </div>
 
                     </a>
@@ -46,16 +36,6 @@
 
             </a>
             <ul aria-expanded="false" class="collapse first-level">
-                <li class="sidebar-item">
-                    <a class="sidebar-link justify-content-between" href="#">
-                        <div
-                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['LY/form_input', 'LY/table']) ? 'show' : ''; ?>">
-                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'LY/form_input' ? 'active' : ''; ?>"
-                                href="?page=LY/form_input">Form Laundry</a>
-                        </div>
-
-                    </a>
-                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
@@ -79,18 +59,9 @@
             <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
-                        <div
-                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['MK/form_input', 'MK/table']) ? 'show' : ''; ?>">
-                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MK/form_input' ? 'active' : ''; ?>"
-                                href="?page=MK/form_input">Form Karyawan</a>
-                        </div>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
                             <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'MK/table' ? 'active' : ''; ?>"
-                                href="?page=MK/table">Table Karyawan</a>
+                                href="?page=MK/table">Karyawan</a>
                         </div>
                     </a>
                 </li>
@@ -108,29 +79,9 @@
             <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
                     <a class="sidebar-link justify-content-between" href="#">
-                        <div
-                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['KT/form_input', 'KT/table']) ? 'show' : ''; ?>">
-                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/form_input' ? 'active' : ''; ?>"
-                                href="?page=KT/form_input">Transaksi Masuk</a>
-                        </div>
-
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link justify-content-between" href="#">
-                        <div
-                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['KT/form_keluar', 'KT/table']) ? 'show' : ''; ?>">
-                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/form_keluar' ? 'active' : ''; ?>"
-                                href="?page=KT/form_keluar">Transaksi Keluar</a>
-                        </div>
-
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link justify-content-between" href="#">
                         <div class="d-flex align-items-center gap-3">
                             <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/table' ? 'active' : ''; ?>"
-                                href="?page=KT/table">Table Transaksi</a>
+                                href="?page=KT/table">Transaksi</a>
                         </div>
 
                     </a>

@@ -8,6 +8,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-dark">TABLE DATA PELANGGAN</h6>
         </div>
+        <a href="?page=MP/form_input"><i class="btn btn-warning btn-user ms-3 mt-3">Tambah Pelanggan</i></a>
         <div class="card-body">
             <?php 
                 if(isset($_SESSION['msg']['success'])){

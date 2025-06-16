@@ -13,6 +13,10 @@ $no = 1;
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-dark">DATA TRANSAKSI</h6>
         </div>
+        <div class="d-flex">
+            <a href="?page=KT/form_input"><i class="btn btn-primary btn-user ms-3 mt-3">Transaksi Masuk</i></a>
+            <a href="?page=KT/form_keluar"><i class="btn btn-warning btn-user ms-3 mt-3">Transaksi Keluar</i></a>
+        </div>
         <div class="card-body">
             <?php 
             if(isset($_SESSION['msg']['success'])){

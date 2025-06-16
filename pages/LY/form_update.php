@@ -13,6 +13,7 @@ $data = mysqli_fetch_array($q);
 <div class="row justify-content-start">
     <div class="col-lg-6">
         <div class="card o-hidden border-0 shadow-lg my-5">
+            <a href="?page=LY/table"><i class="btn btn-dark btn-user ms-3 mt-3">Kembali</i></a>
             <div class="card-body p-5">
                 <?php 
                         if(isset($_SESSION['msg']['error'])){
