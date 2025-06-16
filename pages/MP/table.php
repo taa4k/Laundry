@@ -8,7 +8,6 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-dark">TABLE DATA PELANGGAN</h6>
         </div>
-        <input type="text" name="cari" class=" w-25 ms-4" placeholder="cari..">
         <div class="card-body">
             <?php 
                 if(isset($_SESSION['msg']['success'])){
@@ -51,11 +50,7 @@
                                     onclick="return confirm('Anda yakin menghapus data ini?')"><i
                                         class="btn btn-danger btn-user">hapus</i></a> |
                                 <a href="?page=MP/form_update&kode_pelanggan=<?= $data['kode_pelanggan'] ?>"><i
-                                        class="btn btn-primary btn-user">edit</i></a>|
-                                <a href="?page=MP/form_detail&kode_pelanggan=<?= $data['kode_pelanggan'] ?>"><i
-                                        class="btn btn-warning btn-user">detail</i></a>|
-                                <a href="?page=LY/form_input&kode_pelanggan=<?= $data['kode_pelanggan'] ?>"><i
-                                        class="btn btn-dark btn-user">laundry</i></a>
+                                        class="btn btn-primary btn-user">edit</i></a>
                             </td>
                         </tr>
                         <?php

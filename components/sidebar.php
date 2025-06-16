@@ -101,7 +101,7 @@
             <a class="sidebar-link justify-content-between has-arrow" href="javascript:void(0)"
                 aria-expanded="<?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['KT/form_input', 'KT/table']) ? 'true' : 'false'; ?>">
                 <div class="d-flex align-items-center gap-3">
-                    <span class="hide-menu">Keuangan dan Transaksi</span>
+                    <span class="hide-menu">Transaksi</span>
                 </div>
 
             </a>
@@ -136,6 +136,28 @@
                     </a>
                 </li>
             </ul>
+            <br>
+        <li class="sidebar-item">
+            <a class="sidebar-link justify-content-between has-arrow" href="javascript:void(0)"
+                aria-expanded="<?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['LY/form_input', 'LY/table']) ? 'true' : 'false'; ?>">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="hide-menu">Laporan Keuangan</span>
+                </div>
+
+            </a>
+            <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                    <a class="sidebar-link justify-content-between" href="#"
+                        aria-expanded="<?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['LK/table']) ? 'true' : 'false'; ?>">
+                        <div class="d-flex align-items-center gap-3">
+                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'LK/table' ? 'active' : ''; ?>"
+                                href="?page=LK/table">Table Laporan Keuangan</a>
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+        </li>
         </li>
     </ul>
 </ul>

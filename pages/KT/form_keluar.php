@@ -62,17 +62,6 @@
                      } ?>
                     </div>
                     <br>
-                    <div class="form-group">
-                        <label for="status_pembayaran">Status Pembayaran</label>
-                        <input type="text"
-                            class="form-control <?php echo (isset($_SESSION['msg']['status_pembayaran'])) ? 'border-danger' : null; ?>"
-                            id="status_pembayaran" name="status_pembayaran" placeholder="Masukkan Status Pembayaran.."
-                            value="<?php echo (isset($_SESSION['value']['status_pembayaran'])) ? $_SESSION['value']['status_pembayaran'] : null; ?>">
-                        <?php if (isset($_SESSION['msg']['status_pembayaran'])) {
-                        echo '<span class="text-danger">' . $_SESSION['msg']['status_pembayaran'] . '</span>';
-                     } ?>
-                    </div>
-                    <br>
                     <button name="btn-submit" type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>

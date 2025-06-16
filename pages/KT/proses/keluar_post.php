@@ -74,5 +74,5 @@ mysqli_autocommit($koneksi, false);
     // Set pesan sukses
     $_SESSION['msg']['success'] = "laundry <b>" . $kode_pelanggan . "</b> sudah di bayar!";
     unset($_SESSION['value']);
-    header('location: ../../?page=KT/form_keluar');
+    header('location: ../../?page=KT/table');
     exit(); 
