@@ -5,7 +5,7 @@ $no = 1;
 
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">TABLE TRANSAKSI</h1>
+    <h1 class="h3 mb-2 text-gray-800">DATA TRANSAKSI</h1>
     <hr>
 
     <!-- DataTales Example -->

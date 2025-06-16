@@ -3,7 +3,7 @@ include('proses/read_rekap.php');
 ?>
 
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-800">Laporan Keuangan Bulanan</h1>
+    <h1 class="h3 mb-4 text-gray-800">LAPORAN KEUANGAN PERBULAN</h1>
     <hr>
 
     <div class="card shadow mb-4">
