@@ -111,7 +111,17 @@
                         <div
                             class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['KT/form_input', 'KT/table']) ? 'show' : ''; ?>">
                             <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/form_input' ? 'active' : ''; ?>"
-                                href="?page=KT/form_input">Form Transaksi</a>
+                                href="?page=KT/form_input">Transaksi Masuk</a>
+                        </div>
+
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link justify-content-between" href="#">
+                        <div
+                            class="d-flex align-items-center gap-3 <?= isset($_REQUEST['page']) && in_array($_REQUEST['page'], ['KT/form_keluar', 'KT/table']) ? 'show' : ''; ?>">
+                            <a class="collapse-item <?= isset($_REQUEST['page']) && $_REQUEST['page'] == 'KT/form_keluar' ? 'active' : ''; ?>"
+                                href="?page=KT/form_keluar">Transaksi Keluar</a>
                         </div>
 
                     </a>
