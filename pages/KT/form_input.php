@@ -76,7 +76,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="tgl_masuk">Tanggal Masuk</label>
+                        <label for="tgl_masuk">Tanggal Masuk Ke Laundry</label>
                         <input type="date"
                             class="form-control <?php echo (isset($_SESSION['msg']['tgl_masuk'])) ? 'border-danger' : null; ?>"
                             id="tgl_masuk" name="tgl_masuk" placeholder="dd-mm-yyyy"

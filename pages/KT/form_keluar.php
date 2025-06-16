@@ -1,7 +1,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">TRANSAKSI KELUAR</h1>
 </div>
-<form action="pages/pinjam/proses/kembali_post.php" method="POST">
+<form action="KT/proses/keluar_post.php" method="POST">
     <hr>
     <div class="row">
         <div class="col-lg-6">
@@ -42,24 +42,38 @@
                             echo '<span class="text-danger">' . $_SESSION['msg']['pelanggan_kode'] . '</span>';
                         } ?>
                     </div>
+                    <br>
                     <div class="form-group">
-                        <label for="nama_anggota">NAMA</label>
-                        <input type="text" class="form-control" id="nama_anggota" name="nama_anggota"
-                            placeholder="Masukkan nama.." readonly
-                            value="<?php echo isset($data['nama']) ? $data['nama'] : '';
-                                 echo (isset($_SESSION['value']['nama_anggota'])) ? $_SESSION['value']['nama_anggota'] : null; ?>" readonly />
+                        <label for="pelanggan_nama">Nama Pelanggan</label>
+                        <input type="text" class="form-control" id="nama_pelanggan" name="pelanggan_nama"
+                            placeholder="Masukkan Nama Pelanggan.." readonly
+                            value="<?php echo isset($data['nama_pelanggan']) ? $data['nama_pelanggan'] : '';
+                                    echo (isset($_SESSION['value']['pelanggan_nama'])) ? $_SESSION['value']['pelanggan_nama'] : null; ?>" readonly />
                     </div>
+                    <br>
                     <div class="form-group">
-                        <label for="tgl_kembali">Tanggal Pengembalian</label>
+                        <label for="tgl_keluar">Tanggal Keluar Dari Laundry</label>
                         <input type="date"
-                            class="form-control <?php echo (isset($_SESSION['msg']['tgl_kembali'])) ? 'border-danger' : null; ?>"
-                            id="tgl_kembali" name="tgl_kembali" placeholder="dd-mm-yyyy"
-                            value="<?php echo (isset($_SESSION['value']['tgl_kembali'])) ? $_SESSION['value']['tgl_kembali'] : null; ?>">
-                        <?php if (isset($_SESSION['msg']['tgl_kembali'])) {
-                        echo '<span class="text-danger">' . $_SESSION['msg']['tgl_kembali'] . '</span>';
+                            class="form-control <?php echo (isset($_SESSION['msg']['tgl_keluar'])) ? 'border-danger' : null; ?>"
+                            id="tgl_keluar" name="tgl_keluar" placeholder="dd-mm-yyyy"
+                            value="<?php echo (isset($_SESSION['value']['tgl_keluar'])) ? $_SESSION['value']['tgl_keluar'] : null; ?>">
+                        <?php if (isset($_SESSION['msg']['tgl_keluar'])) {
+                        echo '<span class="text-danger">' . $_SESSION['msg']['tgl_keluar'] . '</span>';
                      } ?>
                     </div>
-                    <button name="btn-submit" type="submit" class="btn btn-dark">Submit</button>
+                    <br>
+                    <div class="form-group">
+                        <label for="status_pembayaran">Status Pembayaran</label>
+                        <input type="text"
+                            class="form-control <?php echo (isset($_SESSION['msg']['status_pembayaran'])) ? 'border-danger' : null; ?>"
+                            id="status_pembayaran" name="status_pembayaran" placeholder="Masukkan Status Pembayaran.."
+                            value="<?php echo (isset($_SESSION['value']['status_pembayaran'])) ? $_SESSION['value']['status_pembayaran'] : null; ?>">
+                        <?php if (isset($_SESSION['msg']['status_pembayaran'])) {
+                        echo '<span class="text-danger">' . $_SESSION['msg']['status_pembayaran'] . '</span>';
+                     } ?>
+                    </div>
+                    <br>
+                    <button name="btn-submit" type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </div>
