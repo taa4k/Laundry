@@ -24,15 +24,7 @@ if(isset($_SESSION['msg']['err_kode']) || isset($_SESSION['msg']['err_atribut'])
     exit();
 }
 
-$query = "SELECT * FROM laundry WHERE atribut='$atribut' AND kode_laundry != '$kode'";
-$q = mysqli_query($koneksi, $query);
-if(mysqli_num_rows($q) != 0){
-    $_SESSION['msg']['error'] = "Data kategori sudah ada, periksa kode atau nama yang sama";
-    header('location:/../?page=LY/form_update&kode_laundry='.$kode);
-    exit();
-}
-
-$query = "UPDATE laundry SET atribut='$atribut', deskripsi='$deskripsi'";
+$query = "UPDATE laundry SET atribut='$atribut', deskripsi='$deskripsi' WHERE kode_laundry='$kode'";
 if (mysqli_query($koneksi, $query)) {
     $_SESSION['msg']['success'] = "Data penerbit berhasil diupdate";    
 } else {

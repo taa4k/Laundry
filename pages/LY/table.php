@@ -8,7 +8,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-dark">DATA LAUNDRY</h6>
         </div>
-        <a href="?page=LY/form_input"><i class="btn btn-warning btn-user ms-3 mt-3">Tambah Pelanggan</i></a>
+        <a href="?page=LY/form_input"><i class="btn btn-warning btn-user ms-3 mt-3">Tambah Laundry</i></a>
         <div class="card-body">
             <?php 
                 if(isset($_SESSION['msg']['success'])){
@@ -24,7 +24,6 @@
                     <thead>
                         <tr>
                             <th>Nomor</th>
-                            <th>Kode Laundry</th>
                             <th>Atribut dan berat</th>
                             <th>Deskripsi</th>
                             <th>aksi</th>
@@ -41,7 +40,6 @@
                             ?>
                         <tr>
                             <th scope="row"><?= $no++ ?></th>
-                            <td><?= $data['kode_laundry'] ?></td>
                             <td><?= $data['atribut'] ?></td>
                             <td><?= $data['deskripsi'] ?></td>
                             <td>

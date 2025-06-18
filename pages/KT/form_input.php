@@ -52,28 +52,29 @@
                             value="<?php echo isset($data['nama_pelanggan']) ? $data['nama_pelanggan'] : '';
                                     echo (isset($_SESSION['value']['pelanggan_nama'])) ? $_SESSION['value']['pelanggan_nama'] : null; ?>" readonly />
                     </div>
+                    <!-- tidak digunakan karena berbahaya ada spike -->
+
                     <br>
                     <div class="form-group">
-                        <label for="laundry_kode">Kode laundry</label>
-                        <div class="d-flex">
-                            <input
-                                value="<?php echo (isset($_SESSION['value']['laundry_kode'])) ? $_SESSION['value']['laundry_kode'] : null; ?>"
-                                type="text"
-                                class="form-control <?php echo (isset($_SESSION['msg']['laundry_kode'])) ? 'border-danger' : null; ?>"
-                                id="laundry_kode" name="laundry_kode" placeholder="Masukkan Kode Laundry.."
-                                onkeyup="showlaundry(this.value)">
-                        </div>
-                        <?php if (isset($_SESSION['msg']['laundry_kode'])) {
-                            echo '<span class="text-danger">' . $_SESSION['msg']['laundry_kode'] . '</span>';
-                        } ?>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="atribut">atribut</label>
-                        <input type="text" class="form-control" id="atribut" name="atribut"
-                            placeholder="Masukkan Atribut.." readonly
-                            value="<?php echo isset($data['atribut']) ? $data['atribut'] : '';
-                                    echo (isset($_SESSION['value']['atribut'])) ? $_SESSION['value']['atribut'] : null; ?>" readonly />
+                        <select
+                            class="form-control <?php echo (isset($_SESSION['msg']['laundry_kode'])) ? 'border-danger' : null; ?>"
+                            id="kode_laundry" name="laundry_kode">
+                            <option value="">Select atribut</option>
+                            <?php 
+                            include('../assets/koneksi.php');
+                            $query = "SELECT * FROM laundry";
+                            $q = mysqli_query($koneksi, $query);
+                            while($var = mysqli_fetch_array($q)) { 
+                            ?>
+                            <option value="<?php echo $var['kode_laundry'];?>">
+                                <?php echo $var['atribut']; ?></option>
+                            <?php } ?>
+                        </select>
+                        <?php 
+                                        if(isset($_SESSION['msg']['laundry_kode'])){
+                                            echo '<span class="text-danger">'.$_SESSION['msg']['laundry_kode'].'</span>';
+                                        }
+                                    ?>
                     </div>
                     <br>
                     <div class="form-group">

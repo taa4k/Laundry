@@ -37,7 +37,7 @@ $data = mysqli_fetch_array($q);
                 </div>
                 <form action="LY/proses/update_post.php" method="POST" class="user">
                     <div class="form-group">
-                        <input readonly value="<?= $data['kode_laundry'] ?>" name="kode" type="text"
+                        <input hidden value="<?= $data['kode_laundry'] ?>" name="kode" type="text"
                             class="form-control form-control-user">
                     </div>
                     <br>

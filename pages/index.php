@@ -39,10 +39,9 @@ include('../components/style.php');
                     </div>
                 </div>
                 <!-- Sidebar navigation-->
-                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                <nav class="sidebar-nav px-10" data-simplebar="">
                     <?php
                       include('../components/sidebar.php');
-
                     ?>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -76,8 +75,7 @@ include('../components/style.php');
                     </div>
                 </nav>
             </header>
-            <div class="body-wrapper-inner"">
-                <div class=" container-fluid">
+            <div class="body-wrapper-inner">
                 <?php 
                     $pages = isset($_REQUEST['page']) && !empty($_REQUEST['page']) ? $_REQUEST['page'] : 'dashboard';
                     include('../pages/'.$pages.'.php');
